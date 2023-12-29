@@ -20,6 +20,9 @@ devDependencies:
   '@sveltejs/vite-plugin-svelte':
     specifier: ^3.0.0
     version: 3.0.1(svelte@4.2.8)(vite@5.0.10)
+  '@tabler/icons-svelte':
+    specifier: ^2.44.0
+    version: 2.44.0(svelte@4.2.8)
   '@types/eslint':
     specifier: 8.56.0
     version: 8.56.0
@@ -44,9 +47,6 @@ devDependencies:
   eslint-plugin-svelte:
     specifier: ^2.35.1
     version: 2.35.1(eslint@8.56.0)(svelte@4.2.8)
-  phosphor-svelte:
-    specifier: ^1.4.0
-    version: 1.4.0(svelte@4.2.8)
   postcss:
     specifier: ^8.4.32
     version: 8.4.32
@@ -649,6 +649,19 @@ packages:
       vitefu: 0.2.5(vite@5.0.10)
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@tabler/icons-svelte@2.44.0(svelte@4.2.8):
+    resolution: {integrity: sha512-aEaYhxwix8ciP/lt1vAOVpyKHf9IYYmGJI+R2ITqi7J26kSsfG3OxMqMgtmqpHdTnetM2Agdix/Ld5OlujQ6Gg==}
+    peerDependencies:
+      svelte: '>=3 <5'
+    dependencies:
+      '@tabler/icons': 2.44.0
+      svelte: 4.2.8
+    dev: true
+
+  /@tabler/icons@2.44.0:
+    resolution: {integrity: sha512-WPPtihDcAwEm1QZM9MXQw6+r/R2/qx7KMU1eegsi9DsqBLAb0W2kbt6e/syvd6j9c+6XNpRVBW1ziGqSWQAWOg==}
     dev: true
 
   /@types/cookie@0.6.0:
@@ -2064,14 +2077,6 @@ packages:
       '@types/estree': 1.0.5
       estree-walker: 3.0.3
       is-reference: 3.0.2
-    dev: true
-
-  /phosphor-svelte@1.4.0(svelte@4.2.8):
-    resolution: {integrity: sha512-S+Eie0yd9oBN+HhBprXB7scMcJPXyJfZdEccMaGTsorNADiN52Y/LnjhlcMD/z3IotI3UNvfTl4m5vQgTgL8Lg==}
-    peerDependencies:
-      svelte: '>=3'
-    dependencies:
-      svelte: 4.2.8
     dev: true
 
   /picocolors@1.0.0:
