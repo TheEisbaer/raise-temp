@@ -8,51 +8,55 @@
 		<!-- Card for Responsibility -->
 		<div class="card card-hover bg-blue-100 p-4 shadow dark:bg-blue-800">
 			<p class="text-center text-2xl font-bold text-blue-800 dark:text-blue-100">
-				R<span class="font-normal">esponsibility</span>
+				R<span class="font-normal">esults</span>
 			</p>
 			<p class="text-center text-sm text-blue-600 dark:text-blue-200">
-				Who needs it? Blame is a sport, and I'm the champion.
+				Driven to showcase results that may or may not happen, but we'll talk about them like
+				they're already legendary
 			</p>
 		</div>
 
 		<!-- Card for Accountability -->
 		<div class="card card-hover bg-green-100 p-4 shadow dark:bg-green-800">
 			<p class="text-center text-2xl font-bold text-green-800 dark:text-green-100">
-				A<span class="font-normal">ccountability</span>
+				A<span class="font-normal">mbitious</span>
 			</p>
 			<p class="text-center text-sm text-green-600 dark:text-green-200">
-				Why own up when you can pass the blame? It's a team effort in dodging consequences.
+				Driven to set our goals just above average, because aiming too high is so last season
 			</p>
 		</div>
 
 		<!-- Card for Integrity -->
 		<div class="card card-hover bg-yellow-100 p-4 shadow dark:bg-yellow-800">
 			<p class="text-center text-2xl font-bold text-yellow-800 dark:text-yellow-100">
-				I<span class="font-normal">ntegrity</span>
+				I<span class="font-normal">mprove</span>
 			</p>
 			<p class="text-center text-sm text-yellow-600 dark:text-yellow-200">
-				Like Bigfoot, people talk about it, but does anyone really know if it exists? Probably not.
+				Driven to enhance and sustain our efforts with the efficiency of a slightly confused
+				goldfish
 			</p>
 		</div>
 
 		<!-- Card for Service -->
 		<div class="card card-hover bg-red-100 p-4 shadow dark:bg-red-800">
 			<p class="text-center text-2xl font-bold text-red-800 dark:text-red-100">
-				S<span class="font-normal">ervice</span>
+				S<span class="font-normal">ustain</span>
 			</p>
+
 			<p class="text-center text-sm text-red-600 dark:text-red-200">
-				Servitude is so last century. Let others handle the charity; I'm busy pampering myself.
+				Driven to consistently exceed expectations as long as they're not too high, and there's a
+				snack break involved
 			</p>
 		</div>
 
 		<!-- Card for Excellence -->
 		<div class="card card-hover bg-purple-100 p-4 shadow dark:bg-purple-800">
 			<p class="text-center text-2xl font-bold text-purple-800 dark:text-purple-100">
-				E<span class="font-normal">xcellence</span>
+				E<span class="font-normal">xceed</span>
 			</p>
 			<p class="text-center text-sm text-purple-600 dark:text-purple-200">
-				Striving for greatness? Nah, mediocrity is my comfort zone. Why bother with the extra
-				effort?
+				Driven to embrace innovation and foster growth in every situation even if it's just finding
+				new ways to procrastinate
 			</p>
 		</div>
 	</div>
