@@ -9,6 +9,7 @@
 	import IconTablerMessage from 'virtual:icons/tabler/message';
 	import IconTablerBell from 'virtual:icons/tabler/bell';
 	import IconTablerReport from 'virtual:icons/tabler/report-analytics';
+	import { page } from '$app/stores';
 
 	type MenuItem = {
 		name: string;
@@ -161,30 +162,39 @@
 			]
 		}
 	];
+
+	$: routeActive = (href: string) => $page.url.pathname.startsWith(href);
+	$: classesActive = (href: string) => (routeActive(href) ? '!bg-primary-500' : '');
 </script>
 
-<nav class="list-nav">
+<div class={$$props.class ?? ''}>
 	<Accordion autocollapse>
-		<ul>
-			{#each menu as menuItem}
-				<AccordionItem>
-					<svelte:fragment slot="lead">
-						<svelte:component this={menuItem.icon} />
-					</svelte:fragment>
-					<svelte:fragment slot="summary">{menuItem.name}</svelte:fragment>
-					<svelte:fragment slot="content">
-						<li>
-							{#each menuItem.children as menuChildrenItem}
-								<a href={menuItem.href + menuChildrenItem.href}>
-									<span class="flex-auto">
-										{menuChildrenItem.name}
-									</span>
-								</a>
-							{/each}
-						</li>
-					</svelte:fragment>
-				</AccordionItem>
-			{/each}
-		</ul>
+		{#each menu as menuItem}
+			<AccordionItem
+				open={routeActive(menuItem.href)}
+				regionControl="transition-colors {classesActive(menuItem.href)}"
+			>
+				test
+				<svelte:fragment slot="lead">
+					<svelte:component this={menuItem.icon} />
+				</svelte:fragment>
+				<svelte:fragment slot="summary">
+					{menuItem.name}</svelte:fragment
+				>mmm
+				<svelte:fragment slot="content">
+					<nav class="list-nav">
+						{#each menuItem.children as { name, href }}
+							<a
+								href="{menuItem.href}{href}"
+								data-sveltekit-preload-data="hover"
+								class="transition-colors !rounded-container-token {classesActive(
+									menuItem.href + href
+								)}">{name}</a
+							>
+						{/each}
+					</nav>
+				</svelte:fragment>
+			</AccordionItem>
+		{/each}
 	</Accordion>
-</nav>
+</div>

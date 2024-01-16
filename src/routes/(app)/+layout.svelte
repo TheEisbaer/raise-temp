@@ -1,25 +1,24 @@
 <script lang="ts">
-	import { AppBar, AppShell, Avatar } from '@skeletonlabs/skeleton';
-	import { title } from '$lib/stores';
+	import { AppShell, Avatar, prefersReducedMotionStore } from '@skeletonlabs/skeleton';
 	import Sidebar from './Sidebar.svelte';
+	import AppBar from './AppBar.svelte';
 </script>
 
-<AppShell slotSidebarLeft="w-1/4  xl:w-1/6">
+<!-- App Shell -->
+<AppShell
+	slotSidebarLeft="bg-surface-50-900-token lg:w-auto bg-surface-50-900-token border-r border-surface-500/30"
+	slotFooter="bg-black p-4"
+>
+	<!-- Header -->
 	<svelte:fragment slot="header">
-		<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
-			<svelte:fragment slot="lead">
-				<a href="/home" class="h2 font-bold">RAISE</a>
-			</svelte:fragment>
-			<h3 class="h3">{$title}</h3>
-			<svelte:fragment slot="trail">
-				<Avatar
-					border="border-4 border-surface-300-600-token hover:!border-primary-500"
-					width="w-12"
-					initials="RA"
-				></Avatar>
-			</svelte:fragment>
-		</AppBar>
+		<AppBar />
 	</svelte:fragment>
-	<svelte:fragment slot="sidebarLeft"><Sidebar /></svelte:fragment>
+
+	<!-- Sidebar (Left) -->
+	<svelte:fragment slot="sidebarLeft">
+		<Sidebar class="hidden w-[250px] overflow-hidden will-change-scroll lg:grid" />
+	</svelte:fragment>
+
+	<!-- Page Content -->
 	<slot />
 </AppShell>

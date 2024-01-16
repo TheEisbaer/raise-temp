@@ -19,7 +19,7 @@ const config = {
 		forms,
 		// 4. Append the Skeleton plugin (after other plugins)
 		skeleton({
-			themes: { preset: ['wintry'] }
+			themes: { preset: ['wintry', 'skeleton'] }
 		})
 	]
 } satisfies Config;
