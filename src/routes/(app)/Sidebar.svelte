@@ -173,20 +173,21 @@
 			<AccordionItem
 				open={routeActive(menuItem.href)}
 				regionControl="transition-colors {classesActive(menuItem.href)}"
+				id={menuItem.href.substring(1)}
 			>
-				test
 				<svelte:fragment slot="lead">
 					<svelte:component this={menuItem.icon} />
 				</svelte:fragment>
 				<svelte:fragment slot="summary">
 					{menuItem.name}</svelte:fragment
-				>mmm
+				>
 				<svelte:fragment slot="content">
 					<nav class="list-nav">
 						{#each menuItem.children as { name, href }}
 							<a
 								href="{menuItem.href}{href}"
 								data-sveltekit-preload-data="hover"
+								data-testid={'link' + href.substring(1).charAt(0).toUpperCase() + href.substring(2)}
 								class="transition-colors !rounded-container-token {classesActive(
 									menuItem.href + href
 								)}">{name}</a

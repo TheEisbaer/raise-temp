@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { AppShell, Avatar, prefersReducedMotionStore } from '@skeletonlabs/skeleton';
+	import { AppShell } from '@skeletonlabs/skeleton';
 	import Sidebar from './Sidebar.svelte';
 	import AppBar from './AppBar.svelte';
 </script>
 
 <!-- App Shell -->
 <AppShell
-	slotSidebarLeft="bg-surface-50-900-token lg:w-auto bg-surface-50-900-token border-r border-surface-500/30"
+	slotSidebarLeft="bg-surface-50-900-token lg:w-auto bg-surface-50-900-token border-r border-surface-500/30 scrollBarGutterClass"
 	slotFooter="bg-black p-4"
 >
 	<!-- Header -->

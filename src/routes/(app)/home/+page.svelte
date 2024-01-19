@@ -3,7 +3,7 @@
 	$title = 'Home';
 </script>
 
-<div class="flex h-screen items-center justify-center bg-gray-100 dark:bg-gray-900">
+<div class="flex h-full items-start justify-center bg-gray-100 pt-[10%] dark:bg-gray-900">
 	<div class="flex space-x-4 px-16">
 		<!-- Card for Responsibility -->
 		<div class="card card-hover bg-blue-100 p-4 shadow dark:bg-blue-800">

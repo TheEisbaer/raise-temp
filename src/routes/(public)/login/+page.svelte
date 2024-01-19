@@ -17,13 +17,27 @@
 
 			<label class="label my-4">
 				<span> Email </span>
-				<input type="email" name="email" placeholder="Email" class="input" required />
+				<input
+					type="email"
+					name="email"
+					placeholder="Email"
+					class="input"
+					required
+					data-testid="inputEmail"
+				/>
 			</label>
 			<label class="label">
 				<span>Password</span>
-				<input type="password" name="password" placeholder="Password" class="input" required />
+				<input
+					type="password"
+					name="password"
+					placeholder="Password"
+					class="input"
+					data-testid="inputPassword"
+					required
+				/>
 			</label>
-			<a href="/home" class="variant-filled btn mt-6 w-full">
+			<a href="/home" class="variant-filled btn mt-6 w-full" data-testid="buttonLogin">
 				<span>
 					<IconTablerLogin2 />
 				</span>
@@ -32,7 +46,7 @@
 
 			<hr class="my-6 border-t" />
 
-			<a href="/home" class="variant-filled btn w-full">
+			<a href="/home" class="variant-filled btn w-full" data-testid="buttonLoginWithMicrosoft">
 				<span>
 					<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21"
 						><path fill="#f35325" d="M0 0h10v10H0z" /><path

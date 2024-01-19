@@ -12,8 +12,10 @@
 	slotTrail="place-content-end"
 >
 	<svelte:fragment slot="lead">
-		<a href="/home" class="h3 font-bold">RAISE</a>
+		<a href="/home" class="h3 font-bold" data-testid="linkLogo">RAISE</a>
 	</svelte:fragment>
-	{$title}
+	<h4 class="h4" data-testid="textTitle">
+		{$title}
+	</h4>
 	<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
 </AppBar>
