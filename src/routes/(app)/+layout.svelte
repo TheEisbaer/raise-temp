@@ -6,7 +6,7 @@
 
 <!-- App Shell -->
 <AppShell
-	slotSidebarLeft="bg-surface-50-900-token lg:w-auto bg-surface-50-900-token border-r border-surface-500/30 scrollBarGutterClass"
+	slotSidebarLeft="bg-surface-50-900-token lg:w-auto bg-surface-50-900-token shadow-md scrollBarGutterClass"
 	slotFooter="bg-black p-4"
 >
 	<!-- Header -->
