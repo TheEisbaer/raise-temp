@@ -6,8 +6,9 @@
 
 <!-- App Shell -->
 <AppShell
-	slotSidebarLeft="bg-surface-50-900-token lg:w-auto bg-surface-50-900-token shadow-md scrollBarGutterClass"
+	slotSidebarLeft="bg-surface-50-900-token lg:w-auto bg-surface-50-900-token shadow-sm scrollBarGutterClass"
 	slotFooter="bg-black p-4"
+	slotPageContent="p-2"
 >
 	<!-- Header -->
 	<svelte:fragment slot="header">
