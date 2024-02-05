@@ -4,7 +4,7 @@
 	import { Paginator, type PaginationSettings } from '@skeletonlabs/skeleton';
 
 	import { DataHandler } from '@vincjo/datatables';
-	import { blur, draw, fade, fly, slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	$title = 'Administration - Admin';
 
 	type Form = {
@@ -110,7 +110,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#each $rows as row, i}
+			{#each $rows as row}
 				<tr transition:fade={{ duration: 200 }}>
 					<td>{row.formId}</td>
 					<td>{row.formName}</td>

@@ -1,6 +1,16 @@
 <script lang="ts">
 	import { title } from '$lib/stores';
+	import { popup, type PopupSettings } from '@skeletonlabs/skeleton';
 	$title = 'Home';
+
+	const popupFeatured: PopupSettings = {
+		// Represents the type of event that opens/closed the popup
+		event: 'click',
+		// Matches the data-popup value on your popup element
+		target: 'popupFeatured',
+		// Defines which side of your trigger the popup will appear
+		placement: 'bottom'
+	};
 </script>
 
 <div class="flex h-full items-start justify-center bg-gray-100 pt-[10%] dark:bg-gray-900">

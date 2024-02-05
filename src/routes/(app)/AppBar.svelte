@@ -1,6 +1,12 @@
 <script lang="ts">
-	import { AppBar, LightSwitch } from '@skeletonlabs/skeleton';
+	import { AppBar, Avatar, LightSwitch, popup, type PopupSettings } from '@skeletonlabs/skeleton';
 	import { title } from '$lib/stores';
+
+	const avatarPopupSettings: PopupSettings = {
+		event: 'click',
+		target: 'popupClick',
+		placement: 'bottom'
+	};
 </script>
 
 <AppBar
@@ -17,5 +23,18 @@
 	<h4 class="h4" data-testid="textTitle">
 		{$title}
 	</h4>
-	<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
+	<svelte:fragment slot="trail">
+		<button use:popup={avatarPopupSettings} data-testid="buttonAvatar">
+			<Avatar
+				width="w-10"
+				border="border-4 border-surface-300-600-token hover:!border-primary-500"
+				cursor="cursor-pointer"
+			/>
+		</button>
+	</svelte:fragment>
 </AppBar>
+
+<div class="card p-4" data-popup="popupClick">
+	<p>Click Content</p>
+	<div class="arrow bg-surface-100" />
+</div>

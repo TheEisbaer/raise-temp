@@ -164,16 +164,17 @@
 	];
 
 	$: routeActive = (href: string) => $page.url.pathname.startsWith(href);
-	$: classesActive = (href: string) => (routeActive(href) ? '!bg-primary-500' : '');
+	$: classesActive = (href: string) => (routeActive(href) ? 'bg-primary-active-token' : '');
 </script>
 
 <div class={$$props.class ?? ''}>
-	<Accordion autocollapse>
+	<Accordion autocollapse rounded="rounded-tr-container-token rounded-br-container-token">
 		{#each menu as menuItem}
 			<AccordionItem
 				open={routeActive(menuItem.href)}
 				regionControl="transition-colors {classesActive(menuItem.href)}"
 				id={menuItem.href.substring(1)}
+				regionPanel="!px-2 !py-0"
 			>
 				<svelte:fragment slot="lead">
 					<svelte:component this={menuItem.icon} />
@@ -188,7 +189,7 @@
 								href="{menuItem.href}{href}"
 								data-sveltekit-preload-data="hover"
 								data-testid={'link' + href.substring(1).charAt(0).toUpperCase() + href.substring(2)}
-								class="transition-colors !rounded-container-token {classesActive(
+								class="my-1 transition-colors !rounded-container-token {classesActive(
 									menuItem.href + href
 								)}">{name}</a
 							>
